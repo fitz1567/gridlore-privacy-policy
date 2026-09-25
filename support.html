@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gridlore Support</title>
+  <meta name="description" content="Help and contact for Gridlore, the word search game for iPhone and iPad.">
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --stroke: #e4e0d6;
+      --text: #1b1f2a;
+      --text-2: #545b6b;
+      --accent: #b86e0c;
+      --accent-soft: #fbeed5;
+      --tile: #eceae3;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e1119;
+        --surface: #191d28;
+        --stroke: #353c4c;
+        --text: #f2f5fa;
+        --text-2: #a5afc4;
+        --accent: #fabd51;
+        --accent-soft: #2e2716;
+        --tile: #262b3a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.65 ui-rounded, -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+
+    header { margin-bottom: 32px; }
+    .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .logo { display: grid; grid-template-columns: repeat(4, 12px); gap: 3px; }
+    .logo span { width: 12px; height: 12px; border-radius: 3px; background: var(--tile); }
+    .logo .on { background: var(--accent); }
+    .brand-name { font-weight: 800; letter-spacing: 0.08em; font-size: 20px; color: var(--accent); }
+    h1 { font-size: clamp(30px, 6vw, 40px); line-height: 1.15; margin: 0 0 8px; }
+    .meta { color: var(--text-2); margin: 0; }
+
+    .contact {
+      background: var(--accent-soft);
+      border: 1px solid var(--stroke);
+      border-radius: 18px;
+      padding: 22px;
+      margin: 0 0 44px;
+    }
+    .contact strong { display: block; font-size: 19px; margin-bottom: 4px; }
+    .contact p { margin: 0 0 14px; }
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 700;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+    }
+    .button:hover { filter: brightness(1.08); }
+    .contact .hint { color: var(--text-2); font-size: 15px; margin: 14px 0 0; }
+
+    h2 { font-size: 22px; line-height: 1.3; margin: 40px 0 14px; }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      margin: 0 0 10px;
+    }
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 14px 44px 14px 18px;
+      font-weight: 700;
+      position: relative;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent);
+      font-size: 22px;
+      font-weight: 700;
+    }
+    details[open] summary::after { content: "–"; }
+    summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 14px; }
+    .answer { padding: 0 18px 16px; }
+    .answer p { margin: 0 0 10px; }
+    .answer p:last-child { margin-bottom: 0; }
+    .path { font-weight: 700; }
+
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 20px;
+      border-top: 1px solid var(--stroke);
+      color: var(--text-2);
+      font-size: 15px;
+    }
+    footer p { margin: 0 0 6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand" aria-hidden="true">
+        <div class="logo">
+          <span></span><span></span><span></span><span></span>
+          <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <span class="brand-name">GRIDLORE</span>
+      </div>
+      <h1>Support</h1>
+      <p class="meta">Help with Gridlore for iPhone and iPad</p>
+    </header>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <strong id="contact-title">Need a hand? Get in touch.</strong>
+      <p>Questions, bug reports and ideas are all welcome. I read every message.</p>
+      <a class="button" href="mailto:k.fitzgerald310@gmail.com?subject=Gridlore%20support">Email support</a>
+      <p class="hint">Or write to <a href="mailto:k.fitzgerald310@gmail.com?subject=Gridlore%20support">k.fitzgerald310@gmail.com</a>. If something isn’t working, it helps to include your device (e.g. iPhone 17), your iOS version, and what you were doing when it happened.</p>
+    </section>
+
+    <h2>Playing</h2>
+
+    <details>
+      <summary>How do I select a word?</summary>
+      <div class="answer">
+        <p>Drag your finger in a straight line from the first letter of a word to the last. Depending on the level, words can run across, down, diagonally, or backwards. Each level shows which directions it uses.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Dragging is hard for me. Is there another way?</summary>
+      <div class="answer">
+        <p>Yes. Turn on <span class="path">You → Settings → Tap to select</span>. Then tap a word’s first letter and then its last letter instead of dragging.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do hints work?</summary>
+      <div class="answer">
+        <p>Tap the lightbulb at the top of the screen. For a few seconds it highlights the first letter of the longest word you haven’t found yet. Each puzzle comes with a limited number of hints, shown on the lightbulb. Using one means that grid can’t earn three stars, and some achievements need you to finish without any.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>When does the Daily Lore puzzle change?</summary>
+      <div class="answer">
+        <p>A new Daily Lore puzzle arrives every day at midnight in your time zone. Everyone gets the same grid, and your first attempt each day is the one that counts toward your streak and the daily leaderboard.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I unlock more packs?</summary>
+      <div class="answer">
+        <p>Free packs unlock as you earn stars. Every cleared level earns at least one star. Beat the level’s target time for two stars, or finish well under it without using a hint for three. Premium packs in <span class="path">Library → The Vault</span> are one-time purchases that unlock straight away.</p>
+      </div>
+    </details>
+
+    <h2>Purchases</h2>
+
+    <details>
+      <summary>How do I restore my purchases?</summary>
+      <div class="answer">
+        <p>Purchases normally come back on their own. If one doesn’t, open the <span class="path">Library</span> tab, scroll to the bottom, and tap <span class="path">Restore Purchases</span>. Make sure you’re signed in with the same Apple Account you bought them with.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Can I get a refund?</summary>
+      <div class="answer">
+        <p>All payments are handled by Apple, so refunds are requested through Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>I was charged but the pack didn’t unlock.</summary>
+      <div class="answer">
+        <p>Try <span class="path">Restore Purchases</span> at the bottom of the Library tab. If the purchase was waiting for approval (for example, through Ask to Buy), it unlocks automatically once approved. If it still doesn’t appear, email me and I’ll help.</p>
+      </div>
+    </details>
+
+    <h2>Game Center &amp; progress</h2>
+
+    <details>
+      <summary>Why aren’t my scores showing on the leaderboards?</summary>
+      <div class="answer">
+        <p>Leaderboards and achievements need Game Center. Sign in under <span class="path">Settings → Game Center</span> on your device, and check that <span class="path">You → Settings → Game Center</span> is on in Gridlore.</p>
+        <p>If you played offline, your scores are saved and upload automatically the next time you’re connected.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Does my progress sync between my devices?</summary>
+      <div class="answer">
+        <p>Your stars, levels and statistics are saved on the device you play on, and are removed if you delete the app. Your purchases and Game Center achievements are tied to your Apple Account, so they carry over to any device you sign in on.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I reset my progress?</summary>
+      <div class="answer">
+        <p>Go to <span class="path">You → Erase Local Progress</span>. This permanently clears your stars, levels and statistics on this device. It can’t be undone. Purchases and Game Center achievements aren’t affected.</p>
+      </div>
+    </details>
+
+    <h2>Accessibility</h2>
+
+    <details>
+      <summary>What accessibility features does Gridlore support?</summary>
+      <div class="answer">
+        <p>Gridlore supports VoiceOver, where every letter in the grid is read aloud and can be selected. It also supports Larger Text, Reduce Motion, and Tap to select. There’s a <span class="path">Reduce flourishes</span> setting in the You tab that turns off celebration animations. Found words are crossed out as well as coloured, so you don’t need to tell colours apart.</p>
+      </div>
+    </details>
+
+    <footer>
+      <p><a href="https://fitz1567.github.io/gridlore-privacy-policy/">Privacy Policy</a> · <a href="mailto:k.fitzgerald310@gmail.com?subject=Gridlore%20support">Contact</a></p>
+      <p>© 2026 Kevin Fitzgerald. Game Center and the App Store are services of Apple Inc.</p>
+    </footer>
+  </main>
+</body>
+</html>
